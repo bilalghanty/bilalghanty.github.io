@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bilal Ghanty | Technology, Engineering & Projects</title>
+  <title>Bilal Ghanty | Technology, Engineering & Business</title>
 
   <meta name="description"
-        content="Official website of Bilal Ghanty, a Mauritius-based student working on technology, engineering, AI, business and motorsport projects.">
+        content="Official website of Bilal Ghanty, an IB Diploma student in Mauritius involved in technology, engineering, AI, business, manufacturing and motorsport projects.">
 
   <meta name="author" content="Bilal Ghanty">
   <meta name="robots" content="index, follow">
 
   <link rel="canonical" href="https://bilalghanty.github.io/">
 
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="profile">
   <meta property="og:title" content="Bilal Ghanty">
   <meta property="og:description"
-        content="Technology, engineering, AI, business and motorsport projects by Bilal Ghanty.">
+        content="Technology, engineering, business, AI and motorsport projects by Bilal Ghanty.">
   <meta property="og:url" content="https://bilalghanty.github.io/">
+  <meta property="og:image"
+        content="https://bilalghanty.github.io/bilal-ghanty.jpeg">
 
   <script type="application/ld+json">
   {
@@ -29,10 +31,20 @@
       "@id": "https://bilalghanty.github.io/#bilal",
       "name": "Bilal Ghanty",
       "url": "https://bilalghanty.github.io/",
-      "description": "Mauritius-based student interested in technology, engineering, AI, business and motorsport.",
+      "image": "https://bilalghanty.github.io/bilal-ghanty.jpeg",
+      "description": "IB Diploma student in Mauritius involved in technology, engineering, AI, business, manufacturing and motorsport projects.",
       "sameAs": [
         "https://www.linkedin.com/in/bilalghanty/",
         "https://github.com/bilalghanty"
+      ],
+      "knowsAbout": [
+        "Technology",
+        "Engineering",
+        "Computer Science",
+        "Artificial Intelligence",
+        "Business",
+        "Manufacturing",
+        "Motorsport"
       ]
     }
   }
@@ -64,9 +76,9 @@
     nav {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(11,13,16,0.9);
-      backdrop-filter: blur(14px);
+      z-index: 100;
+      background: rgba(11, 13, 16, 0.88);
+      backdrop-filter: blur(15px);
       border-bottom: 1px solid #222;
     }
 
@@ -78,10 +90,10 @@
     }
 
     .logo {
-      font-size: 1.15rem;
+      color: white;
       font-weight: 700;
       text-decoration: none;
-      color: white;
+      font-size: 1.15rem;
     }
 
     .nav-links {
@@ -100,13 +112,16 @@
     }
 
     .hero {
-      min-height: 78vh;
+      min-height: 85vh;
       display: flex;
       align-items: center;
     }
 
-    .hero-content {
-      max-width: 850px;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.7fr;
+      gap: 70px;
+      align-items: center;
     }
 
     .tag {
@@ -115,16 +130,26 @@
     }
 
     h1 {
-      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-size: clamp(3.8rem, 9vw, 7rem);
       line-height: 0.95;
       letter-spacing: -4px;
       margin-bottom: 30px;
     }
 
-    .hero p {
-      max-width: 720px;
-      font-size: 1.35rem;
+    .hero-text {
+      max-width: 700px;
+      font-size: 1.28rem;
       color: #aaa;
+    }
+
+    .hero-photo {
+      width: 100%;
+      max-width: 360px;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      border-radius: 24px;
+      border: 1px solid #292c31;
     }
 
     .buttons {
@@ -171,13 +196,13 @@
       border: 1px solid #24272b;
       border-radius: 18px;
       padding: 28px;
-      min-height: 210px;
+      min-height: 230px;
       transition: 0.25s;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      border-color: #444;
+      transform: translateY(-5px);
+      border-color: #4a4d52;
     }
 
     .card span {
@@ -190,14 +215,34 @@
       margin: 15px 0 10px;
     }
 
-    .card p,
-    .about-text {
+    .card p {
       color: #aaa;
     }
 
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
     .about-text {
-      max-width: 760px;
-      font-size: 1.15rem;
+      color: #aaa;
+      font-size: 1.12rem;
+    }
+
+    .about-highlight {
+      background: #121417;
+      border: 1px solid #24272b;
+      border-radius: 18px;
+      padding: 28px;
+    }
+
+    .about-highlight h3 {
+      margin-bottom: 14px;
+    }
+
+    .about-highlight p {
+      color: #aaa;
     }
 
     .press-box {
@@ -221,12 +266,17 @@
       gap: 15px;
     }
 
-    footer a {
-      color: #aaa;
-      text-decoration: none;
-    }
+    @media (max-width: 800px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
 
-    @media (max-width: 700px) {
+      .hero-photo {
+        margin: 0;
+        max-width: 300px;
+      }
+
       h1 {
         letter-spacing: -2px;
       }
@@ -235,12 +285,8 @@
         gap: 13px;
       }
 
-      .nav-links a:nth-child(3) {
-        display: none;
-      }
-
       .hero {
-        min-height: 70vh;
+        padding: 70px 0;
       }
     }
   </style>
@@ -264,42 +310,71 @@
 <main>
 
   <section class="hero">
-    <div class="container hero-content">
+    <div class="container hero-grid">
 
-      <div class="tag">Mauritius</div>
+      <div>
+        <div class="tag">Mauritius 🇲🇺</div>
 
-      <h1>Bilal<br>Ghanty.</h1>
+        <h1>Bilal<br>Ghanty.</h1>
 
-      <p>
-        Student, builder and technology enthusiast working on projects
-        across engineering, AI, digital experiences, business and motorsport.
-      </p>
+        <p class="hero-text">
+          IB Diploma student working across technology, engineering,
+          artificial intelligence, business, manufacturing and motorsport,
+          with hands-on involvement in projects through Neetoo Industries
+          and Quads Mauritius.
+        </p>
 
-      <div class="buttons">
-        <a class="button" href="#projects">View Projects</a>
-        <a class="button secondary"
-           href="https://www.linkedin.com/in/bilalghanty/"
-           target="_blank">
-          LinkedIn
-        </a>
+        <div class="buttons">
+          <a class="button" href="#projects">View Projects</a>
+
+          <a class="button secondary"
+             href="https://www.linkedin.com/in/bilalghanty/"
+             target="_blank">
+            LinkedIn
+          </a>
+        </div>
       </div>
 
+      <img
+        src="bilal-ghanty.jpeg"
+        alt="Bilal Ghanty"
+        class="hero-photo">
     </div>
   </section>
+
 
   <section id="projects">
     <div class="container">
 
-      <h2>Selected Projects</h2>
+      <h2>Selected Work & Projects</h2>
 
       <div class="projects">
 
         <article class="card">
-          <span>Digital Experience</span>
+          <span>Business • Manufacturing • Operations</span>
+          <h3>Neetoo Industries</h3>
+          <p>
+            Hands-on involvement across administration, technology,
+            supplier sourcing, manufacturing-related projects, operations,
+            business development and special projects within the family business.
+          </p>
+        </article>
+
+        <article class="card">
+          <span>Digital Experience • Neetoo Industries</span>
           <h3>360° Virtual Showroom</h3>
           <p>
-            A 360° photography project designed to let customers explore
-            a physical showroom through an interactive digital experience.
+            Created a 360° digital showroom experience using high-resolution
+            panoramic photography to make a physical showroom explorable online.
+          </p>
+        </article>
+
+        <article class="card">
+          <span>Automotive • Motorsport • Business</span>
+          <h3>Quads Mauritius</h3>
+          <p>
+            Involvement in the development of Quads Mauritius, including
+            automotive sourcing, logistics, operations and motorsport-related projects.
           </p>
         </article>
 
@@ -307,17 +382,8 @@
           <span>Artificial Intelligence</span>
           <h3>Mauritius Telecom AI Video Contest</h3>
           <p>
-            A creative project exploring AI-generated media for the
-            Mauritius Telecom AI Video Contest.
-          </p>
-        </article>
-
-        <article class="card">
-          <span>Automotive & Business</span>
-          <h3>Quads Mauritius</h3>
-          <p>
-            Projects involving motorsport, automotive technology and
-            the development of Quads Mauritius.
+            A creative project exploring the use of artificial intelligence
+            in digital media through the Mauritius Telecom AI Video Contest.
           </p>
         </article>
 
@@ -326,22 +392,61 @@
     </div>
   </section>
 
+
   <section id="about">
     <div class="container">
 
       <h2>About</h2>
 
-      <p class="about-text">
-        I'm Bilal Ghanty, a student based in Mauritius with interests
-        spanning computer science, engineering, artificial intelligence,
-        business and motorsport.
-        <br><br>
-        I use this site to document projects I build, competitions I take
-        part in and ideas I'm exploring.
-      </p>
+      <div class="about-grid">
+
+        <div class="about-text">
+          <p>
+            I'm Bilal Ghanty, an IB Diploma student at Le Bocage
+            International School in Mauritius.
+          </p>
+
+          <br>
+
+          <p>
+            I'm interested in technology, engineering, computer science,
+            artificial intelligence, business, manufacturing and motorsport.
+            I especially enjoy projects where I can actually build, test,
+            improve or create something.
+          </p>
+
+          <br>
+
+          <p>
+            Outside school, I'm actively involved in real-world business
+            and technology projects, particularly through Neetoo Industries
+            and Quads Mauritius.
+          </p>
+        </div>
+
+        <div class="about-highlight">
+          <h3>Neetoo Industries</h3>
+
+          <p>
+            My involvement at Neetoo Industries includes administration,
+            technology, sourcing, supplier coordination, digital systems,
+            manufacturing-related work, business development and special projects.
+          </p>
+
+          <br>
+
+          <p>
+            I'm regularly trusted with responsibilities that involve working
+            alongside senior management and contributing to projects across
+            different areas of the company.
+          </p>
+        </div>
+
+      </div>
 
     </div>
   </section>
+
 
   <section id="press">
     <div class="container">
@@ -349,12 +454,13 @@
       <h2>Press & Recognition</h2>
 
       <div class="press-box">
-        Media coverage, competition features and other independent
-        mentions of my work will be collected here.
+        Competition features, independent mentions, media coverage and
+        recognition of my projects will be collected here.
       </div>
 
     </div>
   </section>
+
 
   <section id="contact">
     <div class="container">
@@ -362,6 +468,7 @@
       <h2>Connect</h2>
 
       <div class="buttons">
+
         <a class="button"
            href="https://www.linkedin.com/in/bilalghanty/"
            target="_blank">
@@ -373,6 +480,7 @@
            target="_blank">
           GitHub
         </a>
+
       </div>
 
     </div>
@@ -380,10 +488,11 @@
 
 </main>
 
+
 <footer>
   <div class="container">
     <span>© 2026 Bilal Ghanty</span>
-    <span>Built in Mauritius 🇲🇺</span>
+    <span>Mauritius 🇲🇺</span>
   </div>
 </footer>
 
