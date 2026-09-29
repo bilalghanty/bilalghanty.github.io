@@ -4,126 +4,388 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bilal Ghanty | Projects, Technology & Engineering</title>
+  <title>Bilal Ghanty | Technology, Engineering & Projects</title>
 
   <meta name="description"
-        content="Official website of Bilal Ghanty, a Mauritius-based student interested in technology, engineering, AI, business and motorsport projects.">
+        content="Official website of Bilal Ghanty, a Mauritius-based student working on technology, engineering, AI, business and motorsport projects.">
+
+  <meta name="author" content="Bilal Ghanty">
+  <meta name="robots" content="index, follow">
 
   <link rel="canonical" href="https://bilalghanty.github.io/">
 
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Bilal Ghanty">
-  <meta property="og:description" content="Projects, technology, engineering and more by Bilal Ghanty.">
+  <meta property="og:description"
+        content="Technology, engineering, AI, business and motorsport projects by Bilal Ghanty.">
   <meta property="og:url" content="https://bilalghanty.github.io/">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Bilal Ghanty",
-    "url": "https://bilalghanty.github.io/",
-    "description": "Mauritius-based student interested in technology, engineering, AI, business and motorsport.",
-    "sameAs": [
-      "https://www.linkedin.com/in/bilalghanty/"
-    ]
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://bilalghanty.github.io/#bilal",
+      "name": "Bilal Ghanty",
+      "url": "https://bilalghanty.github.io/",
+      "description": "Mauritius-based student interested in technology, engineering, AI, business and motorsport.",
+      "sameAs": [
+        "https://www.linkedin.com/in/bilalghanty/",
+        "https://github.com/bilalghanty"
+      ]
+    }
   }
   </script>
 
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 25px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b0d10;
+      color: #f5f5f5;
       line-height: 1.6;
     }
 
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11,13,16,0.9);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #222;
+    }
+
+    nav .container {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: white;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .tag {
+      color: #888;
+      margin-bottom: 18px;
+    }
+
     h1 {
-      font-size: 3.5rem;
-      margin-bottom: 10px;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      line-height: 0.95;
+      letter-spacing: -4px;
+      margin-bottom: 30px;
     }
 
-    h2 {
-      margin-top: 60px;
+    .hero p {
+      max-width: 720px;
+      font-size: 1.35rem;
+      color: #aaa;
     }
 
-    .intro {
-      font-size: 1.3rem;
-      max-width: 650px;
+    .buttons {
+      margin-top: 35px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .project {
-      padding: 20px 0;
-      border-bottom: 1px solid #ddd;
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      background: white;
+      color: black;
+      font-weight: 600;
     }
 
-    a {
-      color: inherit;
+    .button.secondary {
+      background: #17191d;
+      color: white;
+      border: 1px solid #2a2d31;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    section h2 {
+      font-size: 2.3rem;
+      margin-bottom: 35px;
+      letter-spacing: -1px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #121417;
+      border: 1px solid #24272b;
+      border-radius: 18px;
+      padding: 28px;
+      min-height: 210px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #444;
+    }
+
+    .card span {
+      color: #777;
+      font-size: 0.85rem;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      margin: 15px 0 10px;
+    }
+
+    .card p,
+    .about-text {
+      color: #aaa;
+    }
+
+    .about-text {
+      max-width: 760px;
+      font-size: 1.15rem;
+    }
+
+    .press-box {
+      background: #121417;
+      border: 1px solid #24272b;
+      border-radius: 18px;
+      padding: 30px;
+      color: #aaa;
+    }
+
+    footer {
+      border-top: 1px solid #222;
+      padding: 40px 0;
+      color: #777;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-links a:nth-child(3) {
+        display: none;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Bilal Ghanty</h1>
+<nav>
+  <div class="container">
+    <a class="logo" href="#">BG.</a>
 
-  <p class="intro">
-    Student based in Mauritius interested in technology, engineering,
-    AI, business and motorsport.
-  </p>
-
-  <p>
-    <a href="https://www.linkedin.com/in/bilalghanty/">LinkedIn</a>
-  </p>
-</header>
-
-<section>
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>360° Virtual Showroom</h3>
-    <p>
-      A digital showroom project using 360° photography to create an
-      interactive way of exploring a physical showroom online.
-    </p>
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#press">Press</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
+</nav>
 
-  <div class="project">
-    <h3>Mauritius Telecom AI Video Contest</h3>
-    <p>
-      A creative AI video project developed for the Mauritius Telecom
-      AI Video Contest.
-    </p>
+<main>
+
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="tag">Mauritius</div>
+
+      <h1>Bilal<br>Ghanty.</h1>
+
+      <p>
+        Student, builder and technology enthusiast working on projects
+        across engineering, AI, digital experiences, business and motorsport.
+      </p>
+
+      <div class="buttons">
+        <a class="button" href="#projects">View Projects</a>
+        <a class="button secondary"
+           href="https://www.linkedin.com/in/bilalghanty/"
+           target="_blank">
+          LinkedIn
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+
+      <h2>Selected Projects</h2>
+
+      <div class="projects">
+
+        <article class="card">
+          <span>Digital Experience</span>
+          <h3>360° Virtual Showroom</h3>
+          <p>
+            A 360° photography project designed to let customers explore
+            a physical showroom through an interactive digital experience.
+          </p>
+        </article>
+
+        <article class="card">
+          <span>Artificial Intelligence</span>
+          <h3>Mauritius Telecom AI Video Contest</h3>
+          <p>
+            A creative project exploring AI-generated media for the
+            Mauritius Telecom AI Video Contest.
+          </p>
+        </article>
+
+        <article class="card">
+          <span>Automotive & Business</span>
+          <h3>Quads Mauritius</h3>
+          <p>
+            Projects involving motorsport, automotive technology and
+            the development of Quads Mauritius.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+
+      <h2>About</h2>
+
+      <p class="about-text">
+        I'm Bilal Ghanty, a student based in Mauritius with interests
+        spanning computer science, engineering, artificial intelligence,
+        business and motorsport.
+        <br><br>
+        I use this site to document projects I build, competitions I take
+        part in and ideas I'm exploring.
+      </p>
+
+    </div>
+  </section>
+
+  <section id="press">
+    <div class="container">
+
+      <h2>Press & Recognition</h2>
+
+      <div class="press-box">
+        Media coverage, competition features and other independent
+        mentions of my work will be collected here.
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+
+      <h2>Connect</h2>
+
+      <div class="buttons">
+        <a class="button"
+           href="https://www.linkedin.com/in/bilalghanty/"
+           target="_blank">
+          LinkedIn
+        </a>
+
+        <a class="button secondary"
+           href="https://github.com/bilalghanty"
+           target="_blank">
+          GitHub
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <span>© 2026 Bilal Ghanty</span>
+    <span>Built in Mauritius 🇲🇺</span>
   </div>
-
-  <div class="project">
-    <h3>Quads Mauritius</h3>
-    <p>
-      Automotive and motorsport-related projects connected with
-      Quads Mauritius.
-    </p>
-  </div>
-</section>
-
-<section>
-  <h2>About</h2>
-
-  <p>
-    I'm Bilal Ghanty, a student in Mauritius with interests across
-    technology, engineering, computer science, business and motorsport.
-    This website documents the projects I work on and things I learn
-    along the way.
-  </p>
-</section>
-
-<section>
-  <h2>Articles & Press</h2>
-
-  <p>
-    Project articles, competition appearances and media coverage will
-    be added here.
-  </p>
-</section>
+</footer>
 
 </body>
 </html>
