@@ -71,7 +71,12 @@
     if ('ResizeObserver' in window) new ResizeObserver(positionConnection).observe(index);
     select(fromHash() || tabs[0]);
     explorer.classList.add('explorer-ready');
-    const syncHash = () => { const tab = fromHash(); if (tab) select(tab); };
+    const syncHash = () => {
+      const tab = fromHash();
+      if (!tab) return;
+      select(tab);
+      requestAnimationFrame(() => document.getElementById('projects').scrollIntoView({behavior: 'instant'}));
+    };
     window.addEventListener('popstate', syncHash);
     window.addEventListener('hashchange', syncHash);
     // Project return links open the right preview with the complete index in view.
