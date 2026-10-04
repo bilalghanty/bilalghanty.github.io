@@ -317,3 +317,23 @@ html.motion-off::view-transition-group(*),html.motion-off::view-transition-old(*
 .home .work-capture-link:hover,.home .work-capture-link:focus-visible{border-color:var(--ink)}
 @media(max-width:1100px){.home .project-evidence{grid-template-columns:1fr;gap:20px}.home .work-capture{justify-self:end;max-width:200px;width:100%}}
 @media(max-width:700px){.home .work-capture{max-width:220px}.home .project-evidence{gap:18px;margin-bottom:18px}}
+
+/* Different rhythms within Crossings: a working ledger, then a personal closing. */
+.home .working-index{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding-top:38px;padding-bottom:42px}
+.home .working-index-head{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.7fr);gap:40px;align-items:start;margin-bottom:28px}
+.home .working-index-head h2{font:500 12px/1.6 Archivo,sans-serif;letter-spacing:.075em;margin:0;padding-top:3px}
+.home .working-index-head p{max-width:410px;font-size:14px;line-height:1.7;color:var(--muted)}
+.home .working-ledger{margin:0}
+.home .working-row{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.7fr);gap:40px;border-top:1px solid var(--rule);padding:16px 0 18px}
+.home .working-row dt{display:grid;grid-template-columns:32px 1fr;gap:12px;align-content:start;font-size:13px;line-height:1.7;font-weight:500;letter-spacing:.035em}
+.home .working-number{font-size:10px;line-height:2.2;color:var(--muted);font-variant-numeric:tabular-nums}
+.home .working-row dd{margin:0;max-width:650px;font-size:15px;line-height:1.65}
+.home .personal-close{background:#e9eae1;padding-top:58px;padding-bottom:65px}
+.home .personal-close .about-statement{max-width:960px;font-size:clamp(42px,5.1vw,78px);line-height:1.12;letter-spacing:-.05em;margin-top:34px}
+.home .about-continuation{display:block;margin-left:8%}
+.home .about-foot{display:grid;grid-template-columns:minmax(130px,.8fr) minmax(0,1.2fr);gap:8%;max-width:950px;margin:38px 0 0 8%;align-items:start}
+.home .about-foot .practice-object{margin:10px 0 0 0}
+.home .about-bio{max-width:470px;justify-self:end;font-size:15px;line-height:1.8}
+.home .about-bio .line-link{font-size:13px;margin-top:22px}
+@media(max-width:1000px){.home .working-index-head,.home .working-row{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:28px}.home .working-row dt{font-size:12px;grid-template-columns:22px 1fr;gap:10px}.home .working-row dd{font-size:14px}.home .about-foot{grid-template-columns:130px minmax(0,1fr);gap:8%;margin-left:0}.home .personal-close .about-statement{font-size:clamp(42px,6vw,60px)}}
+@media(max-width:700px){.home .working-index{padding-top:28px;padding-bottom:25px}.home .working-index-head{display:block;margin-bottom:25px}.home .working-index-head h2{font-size:11px;padding:0}.home .working-index-head p{font-size:13px;max-width:295px;margin:14px 0 0 32px}.home .working-row{grid-template-columns:1fr;gap:7px;padding:15px 0 17px}.home .working-row dt{font-size:11px;grid-template-columns:22px 1fr;gap:10px;letter-spacing:.04em}.home .working-number{font-size:9px;line-height:2.05}.home .working-row dd{font-size:13px;line-height:1.7;margin-left:32px;max-width:410px}.home .personal-close{padding-top:40px;padding-bottom:45px}.home .personal-close .about-statement{font-size:clamp(34px,9.5vw,52px);line-height:1.15;margin-top:25px}.home .about-continuation{margin-left:8%}.home .about-foot{display:block;position:relative;max-width:none;margin:30px 0 0 8%}.home .about-foot .practice-object{display:none}.home .about-bio{max-width:470px;font-size:14px;line-height:1.8}.home .about-bio .line-link{font-size:12px;margin-top:20px}}
