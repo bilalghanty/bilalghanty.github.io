@@ -73,6 +73,7 @@
 
 @media(max-width:700px){.tk-bill-photo{width:220px;margin-top:24px}}
 
-/* R41 is a small square source; preserve its full frame and keep its display restrained. */
-.tk-hero[data-asset-id="R41"]{width:100%;max-width:400px;justify-self:end}
-@media(max-width:700px){.tk-hero[data-asset-id="R41"]{width:90%;max-width:320px;margin-left:auto}}
+/* J15 stays uncropped: people, karts and the original watermark are part of the story. */
+.tk-hero[data-asset-id="J15"]{width:100%;max-width:580px;justify-self:end}
+.tk-hero picture{display:block}
+@media(max-width:700px){.tk-hero[data-asset-id="J15"]{width:100%;max-width:480px;margin-left:auto}}
