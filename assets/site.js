@@ -123,10 +123,10 @@
       button.addEventListener('click', async () => {
         const status = button.parentElement.querySelector('.share-status');
         try {
-          await navigator.clipboard.writeText('https://bilalghanty.github.io/');
+          await navigator.clipboard.writeText('https://bilalghanty.com/');
           status.textContent = 'Website link copied.';
           button.querySelector('span').innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m4 12 5 5 11-11"/></svg>';
-        } catch { status.textContent = 'Website: bilalghanty.github.io'; }
+        } catch { status.textContent = 'Website: bilalghanty.com'; }
       });
     });
   }
